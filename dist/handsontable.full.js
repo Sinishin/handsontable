@@ -5082,7 +5082,7 @@ Handsontable.Core = function Core(rootElement, userSettings) {
           if (changes[i][3].length > 0 && (/^-?[\d\s]*(\.|\,)?\d*$/.test(changes[i][3]) || cellProperties.format)) {
             var len = changes[i][3].length;
             if (typeof cellProperties.language == 'undefined') {
-              numeral.language('en');
+              numeral.language(numeral.currentLanguage);
             } else if (changes[i][3].indexOf('.') === len - 3 && changes[i][3].indexOf(',') === -1) {
               numeral.language('en');
             } else {
